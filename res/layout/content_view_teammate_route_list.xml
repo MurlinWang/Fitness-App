@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.ucsd.cse110.WalkWalkRevolution.Route_List_Click">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/teammate_route_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:text="Route Name:"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/teammate_route_name_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/teammate_route_name_tv"
+            android:layout_alignBottom="@id/teammate_route_name_tv"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/teammate_route_name_tv"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/teammate_start_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/teammate_route_name_tv"
+            android:layout_alignLeft="@id/teammate_route_name_tv"
+            android:text="Start Location:"
+            android:textStyle="bold"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/teammate_start_location_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/teammate_start_location_tv"
+            android:layout_alignBottom="@+id/teammate_start_location_tv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="-11dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="-8dp"
+            android:layout_toRightOf="@id/teammate_start_location_tv"
+            android:inputType="textPersonName"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/teammate_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="26sp"
+            android:layout_below="@id/teammate_start_location_tv"
+            />
+        <TextView
+            android:id="@+id/teammate_time_display"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teammate_time_text"
+            android:layout_marginLeft="10dp"
+            android:background="#46AD9F9F"
+            android:text="99:99:99"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/teammate_ms_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999"
+            android:textSize="12dp"
+            android:layout_alignTop="@id/teammate_time_display"
+            android:layout_alignRight="@id/teammate_time_display"/>
+        <TextView
+            android:id="@+id/teammate_distance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="Distance"
+            android:textSize="26dp"
+            android:layout_alignTop="@id/teammate_time_text"
+            />
+        <TextView
+            android:id="@+id/teammate_distance_display"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teammate_distance_text"
+            android:layout_centerHorizontal="true"
+            android:background="#46AD9F9F"
+            android:text="999.12"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/teammate_miles_display"
+            android:layout_width="24dp"
+            android:layout_height="18dp"
+            android:textSize="12dp"
+            android:text=" Mi"
+            android:layout_alignTop="@id/teammate_distance_display"
+            android:layout_alignRight="@id/teammate_distance_display"/>
+        <TextView
+            android:id="@+id/teammate_steps_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Steps"
+            android:textSize="26dp"
+            android:layout_alignTop="@id/teammate_time_text"
+            android:layout_toRightOf="@id/teammate_distance_text"
+            />
+        <TextView
+            android:id="@+id/teammate_steps_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:background="#46AD9F9F"
+            android:text="9999999"
+            android:textSize="20dp"
+            android:layout_below="@id/teammate_steps_text"
+            android:layout_toRightOf="@id/teammate_distance_display"/>
+        <Switch
+            android:id="@+id/teammate_favorite_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Save to Favorites "
+            android:textSize="16dp"
+            android:layout_below="@id/teammate_distance_display"/>
+        <TextView
+            android:id="@+id/teammate_terriain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:text="Terrain Type"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:layout_below="@id/teammate_favorite_switch"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/teammate_rgroup1"
+            android:layout_gravity = "fill_vertical"
+            android:layout_below="@id/teammate_terriain">
+            <RadioButton
+                android:id="@+id/teammate_flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flat"
+                android:textSize="20dp"
+                />
+
+            <RadioButton
+                android:id="@+id/teammate_hilly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hilly"
+                android:textSize="20dp" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/teammate_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:text="Difficulty"
+            android:textSize="24dp"
+            android:layout_below="@id/teammate_rgroup1"
+            />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teammate_rgroup2"
+            android:layout_marginTop="15dp"
+            android:layout_gravity = "fill_vertical"
+            android:layout_below="@id/teammate_difficulty">
+            <RadioButton
+                android:id="@+id/teammate_easy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy"
+                android:textSize="20dp"
+                />
+            <RadioButton
+                android:id="@+id/teammate_difficult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difficult"
+                android:textSize="20dp" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/teammate_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surface Type"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:layout_below="@id/teammate_favorite_switch"
+            android:layout_alignParentRight="true"
+            />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teammate_rgroup3"
+            android:layout_gravity = "fill_vertical"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/teammate_surface"
+            android:layout_alignLeft="@id/teammate_surface">
+            <RadioButton
+                android:id="@+id/teammate_even"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Even"
+                android:textSize="20dp"
+                />
+
+            <RadioButton
+                android:id="@+id/teammate_uneven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uneven"
+                android:textSize="20dp" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/teammate_trail_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Trail Type"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:layout_below="@id/teammate_rgroup3"
+            android:layout_alignLeft="@id/teammate_surface" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teammate_rgroup4"
+            android:layout_marginTop="15dp"
+
+            android:layout_below="@id/teammate_trail_type"
+            android:layout_alignLeft="@id/teammate_trail_type">
+            <RadioButton
+                android:id="@+id/teammate_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Street"
+                android:textSize="20dp"
+                />
+
+            <RadioButton
+                android:id="@+id/teammate_trail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trail"
+                android:textSize="20dp" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/teammate_walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:text="Walk Type"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            android:layout_below="@id/teammate_rgroup2"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teammate_rgroup5"
+            android:layout_marginTop="15dp"
+            android:layout_gravity = "fill_vertical"
+            android:layout_below="@id/teammate_walk"
+            android:layout_alignLeft="@id/teammate_walk">
+            <RadioButton
+                android:id="@+id/teammate_loop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loop"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/teammate_outandback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Out-and-back"
+                android:textSize="20dp" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/teammate_note_field_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/teammate_rgroup5"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:text="Note for route field" />
+        <EditText
+            android:id="@+id/teammate_note_field_ev"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/teammate_note_field_tv"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+        <Button
+            android:id="@+id/teammate_propose_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="Propose"
+            android:layout_below="@id/teammate_note_field_ev" />
+
+        <Button
+            android:id="@+id/teammate_start_route_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="Start Walk/Run"
+            android:layout_below="@id/teammate_propose_btn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</ScrollView>

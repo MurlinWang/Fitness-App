@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inviterProposed">
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="Schedule Date : "
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/display_date"
+        android:layout_width="220dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="24dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/date"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toTopOf="@+id/date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Schedule Time:"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/display_time"
+        android:layout_width="225dp"
+        android:layout_height="36dp"
+        android:textSize="24dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/time"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@+id/time" />
+
+
+    <TextView
+        android:id="@+id/Propose_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Route Name : "
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+
+    <TextView
+        android:id="@+id/Propose_title_ev"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="route name"
+        app:layout_constraintBottom_toBottomOf="@+id/Propose_title_tv"
+        app:layout_constraintStart_toEndOf="@+id/Propose_title_tv"
+        app:layout_constraintTop_toTopOf="@+id/Propose_title_tv" />
+
+
+    <TextView
+        android:id="@+id/Propose_start_point_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Starting Point: "
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/Propose_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/Propose_title_tv" />
+
+
+    <TextView
+        android:id="@+id/Propose_start_point_ev"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Starting Point"
+        app:layout_constraintBottom_toBottomOf="@+id/Propose_start_point_tv"
+        app:layout_constraintStart_toEndOf="@+id/Propose_start_point_tv"
+        app:layout_constraintTop_toTopOf="@+id/Propose_start_point_tv" />
+
+    <Button
+        android:id="@+id/propose_schedule"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="244dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="10dp"
+        android:text="Schedule Walk"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/propose_withdraw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/propose_withdraw"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="10dp"
+        android:text="Withdraw Walk"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/propose_teammate_status"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFEB3B"
+        android:gravity="center_horizontal"
+        android:text="Teammate Status"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Propose_start_point_tv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/propose_recylerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/propose_schedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/propose_teammate_status" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

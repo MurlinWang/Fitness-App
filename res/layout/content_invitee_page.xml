@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".inviteePlanning">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Invitee_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="Invitee" />
+
+
+    <TextView
+        android:id="@+id/invitee_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Schedule Date : "
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Invitee_bar"
+        app:layout_constraintTop_toBottomOf="@+id/Invitee_bar" />
+
+    <TextView
+        android:id="@+id/invitee_display_date"
+        android:layout_width="220dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="15dp"
+        android:text="display date"
+        android:textSize="24dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/invitee_date"
+        app:layout_constraintStart_toEndOf="@+id/invitee_date"
+        app:layout_constraintTop_toTopOf="@+id/invitee_date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/invitee_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Schedule Time:"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/invitee_date"
+        app:layout_constraintTop_toBottomOf="@+id/invitee_display_date" />
+
+    <TextView
+        android:id="@+id/invitee_display_time"
+        android:layout_width="225dp"
+        android:layout_height="36dp"
+        android:text="display time"
+        android:textSize="24dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/invitee_time"
+        app:layout_constraintStart_toEndOf="@+id/invitee_time"
+        app:layout_constraintTop_toTopOf="@+id/invitee_time" />
+
+
+    <TextView
+        android:id="@+id/invitee_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Route Name : "
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/invitee_time"
+        app:layout_constraintTop_toBottomOf="@+id/invitee_time" />
+
+
+    <TextView
+        android:id="@+id/invitee_title_ev"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="route name"
+        app:layout_constraintBottom_toBottomOf="@+id/invitee_title_tv"
+        app:layout_constraintStart_toEndOf="@+id/invitee_title_tv"
+        app:layout_constraintTop_toTopOf="@+id/invitee_title_tv" />
+
+
+    <TextView
+        android:id="@+id/invitee_start_point_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Starting Point: "
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/invitee_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/invitee_title_tv" />
+
+
+    <TextView
+        android:id="@+id/invitee_start_point_ev"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Starting Point"
+        app:layout_constraintBottom_toBottomOf="@+id/invitee_start_point_tv"
+        app:layout_constraintStart_toEndOf="@+id/invitee_start_point_tv"
+        app:layout_constraintTop_toTopOf="@+id/invitee_start_point_tv" />
+
+    <TextView
+        android:id="@+id/inviter_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Inviter Name: "
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/invitee_start_point_tv"
+        app:layout_constraintTop_toBottomOf="@+id/invitee_start_point_ev" />
+
+
+    <TextView
+        android:id="@+id/inviter_name_ev"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="inviter name"
+        app:layout_constraintBottom_toBottomOf="@+id/inviter_name_tv"
+        app:layout_constraintStart_toEndOf="@+id/inviter_name_tv"
+        app:layout_constraintTop_toTopOf="@+id/inviter_name_tv" />
+
+    <TextView
+        android:id="@+id/invitee_teammate_status"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFEB3B"
+        android:gravity="center_horizontal"
+        android:text="Teammate Status"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inviter_name_tv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Invitee_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/invitee_accept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invitee_teammate_status" />
+
+    <Button
+        android:id="@+id/invitee_start"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="201dp"
+        android:layout_height="52dp"
+        android:text="Start"
+        android:layout_marginLeft="10dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/invitee_decline_bad_time"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/invitee_accept"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="143dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="10dp"
+        android:text="accept"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/invitee_decline_bad_time"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/invitee_decline_bad_time"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Decline(Bad time)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/invitee_decline_not_good_route"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="Decline(Not good route)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.ucsd.cse110.WalkWalkRevolution.RouteListActivity">
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/route_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        android:text="Route Name:"
+        android:textSize="29dp"
+        />
+
+    <EditText
+        android:id="@+id/route_name_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/route_name_tv"
+        android:layout_toRightOf="@id/route_name_tv"
+        android:hint="Rose Canyon Loop"
+        android:textSize="21dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/start_location_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/route_name_tv"
+        android:layout_alignLeft="@id/route_name_tv"
+        android:text="Start Location:"
+        android:textStyle="bold"
+        android:textSize="29dp" />
+    <EditText
+        android:id="@+id/start_location_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Park East Entrance"
+        android:inputType="textPersonName"
+        android:textSize="21dp"
+        android:layout_alignTop="@id/start_location_tv"
+        android:layout_toRightOf="@id/start_location_tv"
+        />
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="26sp"
+        android:layout_below="@id/start_location_tv"
+        />
+    <TextView
+        android:id="@+id/time_display"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_text"
+        android:layout_marginLeft="10dp"
+        android:background="#46AD9F9F"
+        android:text="00:00:00"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/ms_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="999"
+        android:textSize="12dp"
+        android:layout_alignTop="@id/time_display"
+        android:layout_alignRight="@id/time_display"/>
+    <TextView
+        android:id="@+id/distance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Distance"
+        android:textSize="26dp"
+        android:layout_alignTop="@id/time_text"
+        />
+    <TextView
+        android:id="@+id/distance_display"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distance_text"
+        android:layout_centerHorizontal="true"
+        android:background="#46AD9F9F"
+        android:gravity="center"
+        android:text="0.0"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/miles_display"
+        android:layout_width="24dp"
+        android:layout_height="18dp"
+        android:textSize="12dp"
+        android:text=" Mi"
+        android:layout_alignTop="@id/distance_display"
+        android:layout_alignRight="@id/distance_display"/>
+    <TextView
+        android:id="@+id/steps_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="Steps"
+        android:textSize="26dp"
+        android:layout_alignTop="@id/time_text"
+        android:layout_toRightOf="@id/distance_text"
+        />
+    <TextView
+        android:id="@+id/steps_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:background="#46AD9F9F"
+        android:text="0"
+        android:textSize="20dp"
+        android:layout_below="@id/steps_text"
+        android:layout_toRightOf="@id/distance_display"/>
+    <Switch
+        android:id="@+id/favorite_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Save to Favorites "
+        android:textSize="16dp"
+        android:layout_below="@id/distance_display"/>
+    <TextView
+        android:id="@+id/terriain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
+        android:text="Terrain Type"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_below="@id/favorite_switch"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/rgroup1"
+        android:layout_gravity = "fill_vertical"
+        android:layout_below="@id/terriain">
+        <RadioButton
+            android:id="@+id/flat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flat"
+            android:textSize="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/hilly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hilly"
+            android:textSize="20dp" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:text="Difficulty"
+        android:textSize="24dp"
+        android:layout_below="@id/rgroup1"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgroup2"
+        android:layout_marginTop="15dp"
+        android:layout_gravity = "fill_vertical"
+        android:layout_below="@id/difficulty">
+        <RadioButton
+            android:id="@+id/easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy"
+            android:textSize="20dp"
+            />
+        <RadioButton
+            android:id="@+id/difficult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difficult"
+            android:textSize="20dp" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surface Type"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="5dp"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:layout_below="@id/favorite_switch"
+        android:layout_alignParentRight="true"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgroup3"
+        android:layout_gravity = "fill_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/surface"
+        android:layout_alignLeft="@id/surface">
+        <RadioButton
+            android:id="@+id/even"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Even"
+            android:textSize="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/uneven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uneven"
+            android:textSize="20dp" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/trail_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Trail Type"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:layout_below="@id/rgroup3"
+        android:layout_alignLeft="@id/surface" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgroup4"
+        android:layout_marginTop="15dp"
+
+        android:layout_below="@id/trail_type"
+        android:layout_alignLeft="@id/trail_type">
+        <RadioButton
+            android:id="@+id/street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Street"
+            android:textSize="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/trail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trail"
+            android:textSize="20dp" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:text="Walk Type"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:layout_below="@id/rgroup2"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgroup5"
+        android:layout_marginTop="15dp"
+        android:layout_gravity = "fill_vertical"
+        android:layout_below="@id/walk"
+        android:layout_alignLeft="@id/walk">
+        <RadioButton
+            android:id="@+id/loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loop"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/outandback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out-and-back"
+            android:textSize="20dp" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/note_field_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/rgroup5"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:text="Note for route field" />
+    <EditText
+        android:id="@+id/note_field_ev"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/note_field_tv"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:text="@android:string/cancel"
+        android:layout_below="@id/note_field_ev"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" />
+    <Button
+        android:id="@+id/done_btn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:text="Save Route"
+        android:layout_below="@id/note_field_ev"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setDateTime">
+
+    <Button
+        android:id="@+id/btndatepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffc107"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="35dp"
+        android:text="Select Date"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+
+        android:id="@+id/txtdate"
+        android:layout_width="290dp"
+        android:layout_height="44dp"
+        android:textColor="#1c1c1c"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btndatepicker"
+        app:layout_constraintLeft_toRightOf="@id/btndatepicker"
+        app:layout_constraintTop_toTopOf="@+id/btndatepicker" />
+
+    <Button
+        android:id="@+id/btntimepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffc107"
+        android:layout_marginTop="35dp"
+        android:text="Select Time"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btndatepicker"
+        app:layout_constraintTop_toBottomOf="@+id/btndatepicker" />
+
+
+    <TextView
+        android:id="@+id/txttime"
+        android:layout_width="290dp"
+        android:layout_height="44dp"
+        android:textColor="#1c1c1c"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btntimepicker"
+        app:layout_constraintLeft_toRightOf="@id/btntimepicker"
+        app:layout_constraintTop_toTopOf="@+id/btntimepicker" />
+
+    <Button
+        android:id="@+id/propose_cancel_btn"
+        android:layout_width="133dp"
+        android:layout_height="73dp"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="40dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/propose_send_btn"
+        android:layout_width="133dp"
+        android:layout_height="73dp"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="40dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

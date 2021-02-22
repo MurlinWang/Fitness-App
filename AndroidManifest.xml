@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="edu.ucsd.cse110.WalkWalkRevolution">
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" tools:remove="android:maxSdkVersion"/>
+
+    <application
+        android:name = ".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ModeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InvitationCenter"
+            android:label="InvitationCenter"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="tap invitation" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".InvitationScreen" />
+        <activity
+            android:name=".TeamScreenActivity"
+            android:label="@string/title_activity_team_screen"
+            android:theme="@style/AppTheme.NoActionBar" >
+        <intent-filter>
+            <action android:name="teammate accept" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".RouteWalkActivity" />
+        <activity
+            android:name=".Route_List_Click"
+            android:label="Route_List_Click"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditWalkActivity"
+            android:label="@string/title_activity_edit_walk"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddNewRouteListActivity"
+            android:label="@string/title_activity_add_new_route_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RouteListActivity"
+            android:label="@string/title_activity_route_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HeightPop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StopWalkActivity"
+            android:label="@string/title_activity_stop_walk"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StartWalkActivity"
+            android:label="@string/title_activity_start_walk"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MockActivity"
+            android:label="@string/mock_btn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".setDateTime"
+            android:label="Propose_set"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".inviterProposed"
+            android:label="Propose_invite_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Route_List_page"
+            android:label="Route_List_page"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".TeamRouteListActivity"
+            android:label="TeamRouteListActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Teammateroute_click"
+            android:label="Teammateroute_click"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".inviterScheduled"
+            android:label="inviter_page"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".inviteePlanning"
+            android:label="invitee_page"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".HubPage"
+            android:label="Hug_page"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="proposed walk" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".Invitation_click"
+            android:label="Invitation_click"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+
+</manifest>

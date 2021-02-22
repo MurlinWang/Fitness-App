@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Walk Walk Revolution</string>
+    <string name="title_activity_start_walk">StartWalkActivity</string>
+    <string name="title_activity_stop_walk">StopWalkActivity</string>
+    <string name="feet_field">feet</string>
+    <string name="inch_field">inches</string>
+    <string name="get_height">What\'s your height?</string>
+    <string name="height_reason">We need it for our distance calculations</string>
+    <string name="height_separator">\"</string>
+    <string name="next_btn">Next</string>
+    <string name="title_activity_route_list">RouteListActivity</string>
+    <string name="title_activity_add_new_route_list">AddNewRouteListActivity</string>
+    <string name="title_activity_edit_walk">EditWalkActivity</string>
+    <string name="mock_btn">Mock</string>
+    <string name="normal_mode">Normal</string>
+    <string name="mode_query">What mode do you want to start the app in?</string>
+    <string name="title_activity_mode">ModeActivity</string>
+    <string name="title_activity_team_screen">TeamScreenActivity</string>
+</resources>
